@@ -1,0 +1,8 @@
+<div class="search-div">
+    <span><b>Search:</b></span>
+    <!-- <input (input)="changeSearchValue($event)" type="text" /> -->
+   <!-- To implement 2 ways data binding add : [(ngModel)] to the input and add FormsModule to app.module.ts inside the imports array -->
+    <input [(ngModel)]="searchValue" type="text" />
+    <div><span [hidden]="searchValue==''">You searched for "{{searchValue}}"</span>
+    </div>
+</div>
