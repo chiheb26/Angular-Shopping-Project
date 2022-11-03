@@ -22,7 +22,10 @@
             </div>
             <div class="options">
                 <button class="btn btn-success">Show Details</button>
-                <button *ngIf="p.available=='Available'" class="btn btn-warning">Buy Now</button>
+                <button *ngIf="p.available==='Available'; else notifyme" class="btn btn-warning">Buy Now</button>
+                <ng-template #notifyme><!-- Giving a name to the template so we can use it in the else part of the ngIf directive -->
+                    <button class="btn btn-danger">Notify me</button>
+                </ng-template>
             </div>
         </div>
 </div>
